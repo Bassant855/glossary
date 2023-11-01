@@ -18,6 +18,7 @@ import feature2 from '../../public/assets/feature__2.webp'
 import {AiFillStar} from 'react-icons/ai'
 import {AiOutlineStar} from 'react-icons/ai'
 import {AiOutlineShopping} from 'react-icons/ai'
+
 const FeatuerSection = () => {
     
     
@@ -44,10 +45,10 @@ const FeatuerSection = () => {
             </div>
 
             {
-                data.map((product) => {
+                data.map((pro1) => {
                     return (
-                        <div key={product.id} className='border border-gray-300 transition-all cursor-pointer hover:scale-105 rounded-lg'>
-                            <img src={product.img} />
+                        <div key={pro1.id} className='border border-gray-300 transition-all cursor-pointer hover:scale-105 rounded-lg'>
+                            <img src={pro1.img} alt="" />
 
                             <div className='flex justify-between px-3 relative'>
                                 <div className='flex text-yellow-400 text-xl'>
@@ -64,8 +65,8 @@ const FeatuerSection = () => {
                                 
                             </div>
 
-                            <h3 className='font-medium text-md p-3'>{product.name}</h3>
-                            <p className='text-red-500 px-3 text-xl pb-3 font-semibold'>{product.price}</p>
+                            <h3 className='font-medium text-md p-3'>{pro1.name}</h3>
+                            <p className='text-red-500 px-3 text-xl pb-3 font-semibold'>{pro1.price}</p>
                         </div>
                     )
                 })
