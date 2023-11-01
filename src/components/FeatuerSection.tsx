@@ -1,9 +1,5 @@
-import feature1 from '../../public/assets/feature__1.webp'
-import feature2 from '../../public/assets/feature__2.webp'
-import {AiFillStar} from 'react-icons/ai'
-import {AiOutlineStar} from 'react-icons/ai'
-import {AiOutlineShopping} from 'react-icons/ai'
-import { useCartContext } from '../context/CartContext'
+
+
 
 const data = [
     {id:0, img:'../../public/assets/product__1.webp',name:'Dried Mango', price:'$500'},
@@ -17,27 +13,16 @@ const data2 = [
     {id:2, img:'../../public/assets/product__3.webp',name:'Jewel Cranberries', price:'$200'},
     {id:3, img:'../../public/assets/product__1.webp',name:'Almond organic', price:'$100'},
 ]
-
-
-interface propsType {
-    img: string;
-    name: string;
-    price: string;
-}
-const FeatuerSection:React.FC<propsType> = ({img, name, price}: any) => {
+import feature1 from '../../public/assets/feature__1.webp'
+import feature2 from '../../public/assets/feature__2.webp'
+import {AiFillStar} from 'react-icons/ai'
+import {AiOutlineStar} from 'react-icons/ai'
+import {AiOutlineShopping} from 'react-icons/ai'
+const FeatuerSection = () => {
     
     
 
-    const {addToCart} = useCartContext()
-    
-    const addProductToCart = () => {
-        // toast.success("done")
-        console.log(img);
-        
-        addToCart({img, name, price})
-        console.log(name);
-        
-    }
+
   return (
     <div className="container my-10">
 
@@ -73,7 +58,7 @@ const FeatuerSection:React.FC<propsType> = ({img, name, price}: any) => {
                                     <AiOutlineStar/>
                                 </div>
                                 <button className='bg-accent text-white w-[50px] h-[50px] rounded-full text-[28px]
-                                 flex items-center justify-center -top-4 absolute right-2' onClick={addProductToCart}>
+                                 flex items-center justify-center -top-4 absolute right-2' >
                                     <AiOutlineShopping/>
                                 </button>
                                 
@@ -120,7 +105,7 @@ const FeatuerSection:React.FC<propsType> = ({img, name, price}: any) => {
                                     <AiOutlineStar/>
                                 </div>
                                 <button className='bg-accent text-white w-[50px] h-[50px] rounded-full text-[28px]
-                                 flex items-center justify-center -top-4 absolute right-2' onClick={addProductToCart}>
+                                 flex items-center justify-center -top-4 absolute right-2' >
                                     <AiOutlineShopping/>
                                 </button>
                                 
